@@ -1,21 +1,12 @@
 # -*- coding: utf-8 -*-
 
-#데이터 N, M, S을 입력받는다 
 n, m, s = map(int, input().split())
-
-#공백으로 구분된 N개의 정수(사람들의 키)를 입력받는다
-data = map(int, input().split())
-
-#사람들의 수를 셀 변수 count를 0으로 초기화한다
+data = list(map(int, input().split()))
 count = 0
 
-#[BEGIN ]
-#count 변수에 정답(조사해야 할 사람의 수)이 저장되도록 코드를 작성해보자
-data_arr = list(data)
+#count 변수에 정답(조사해야 할 사람의 수) 저장
 for height in range(n):
-	if data_arr[height] == m or data_arr[height] == s:
+	if data[height] == m or data[height] == s:
 		count = count + 1
-
-#[END]
 
 print(count)
